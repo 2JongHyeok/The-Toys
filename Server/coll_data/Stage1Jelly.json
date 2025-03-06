@@ -1,0 +1,767 @@
+{
+	"BP_Jelly1_C_12_958706A74FA0DD8016166B88157C8077": [
+		{
+			"Type": 1,
+			"LocationX": 18360.179685441955,
+			"LocationY": 22281.001209153481,
+			"LocationZ": 136.0008087382638,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 0
+		}
+	],
+	"BP_Jelly1_C_13_1923C3ED4390C74BA03D688D000C1617": [
+		{
+			"Type": 1,
+			"LocationX": 2654.9797330482779,
+			"LocationY": 16573.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 9.9999999999999982,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 1
+		}
+	],
+	"BP_Jelly1_C_14_E522D2F24DCAE73A6DF27AB039155E2D": [
+		{
+			"Type": 1,
+			"LocationX": 20152.784591188418,
+			"LocationY": 21336.001282469748,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 2
+		}
+	],
+	"BP_Jelly1_C_15_892FCBA44185C78A28EB6896139CD260": [
+		{
+			"Type": 1,
+			"LocationX": 18330.179720441956,
+			"LocationY": 21566.001192153479,
+			"LocationZ": 136.0008087382638,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 3
+		}
+	],
+	"BP_Jelly1_C_16_8571FBBE49C9E4B8EC836CAF6B243A5D": [
+		{
+			"Type": 1,
+			"LocationX": 18330.179706441955,
+			"LocationY": 21851.001192153479,
+			"LocationZ": 136.0008087382638,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 4
+		}
+	],
+	"BP_Jelly1_C_17_F267562946B06DE825018EBDE499FECF": [
+		{
+			"Type": 1,
+			"LocationX": 18330.179694441955,
+			"LocationY": 22106.001192153479,
+			"LocationZ": 136.0008087382638,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 5
+		}
+	],
+	"BP_Jelly1_C_18_79B3ED0C4FD87DBF44C2F9935F5B494E": [
+		{
+			"Type": 1,
+			"LocationX": 17772.78463118842,
+			"LocationY": 21056.001166455615,
+			"LocationZ": 133.19285393024293,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 6
+		}
+	],
+	"BP_Jelly1_C_19_30211CEA4EE70793694DB2BDB24B18AC": [
+		{
+			"Type": 1,
+			"LocationX": 18337.784645188418,
+			"LocationY": 20786.001193455617,
+			"LocationZ": 133.19285393024293,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 7
+		}
+	],
+	"BP_Jelly1_C_20_E6ABE9E8477B5E972935EF9FB1163030": [
+		{
+			"Type": 1,
+			"LocationX": 18337.784667188418,
+			"LocationY": 20306.001193455617,
+			"LocationZ": 133.19285393024293,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 8
+		}
+	],
+	"BP_Jelly1_C_21_FA0B40814C1E6B3E3109569DBB81E52D": [
+		{
+			"Type": 1,
+			"LocationX": 17772.784682188416,
+			"LocationY": 19996.001166455615,
+			"LocationZ": 133.19285393024293,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 9
+		}
+	],
+	"BP_Jelly1_C_22_BEE24EE5421184396E00BA8840953428": [
+		{
+			"Type": 1,
+			"LocationX": 17077.784667188418,
+			"LocationY": 20321.001132455614,
+			"LocationZ": 133.19285393024293,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 10
+		}
+	],
+	"BP_Jelly1_C_23_5DE6F8AF4C4B0553CEDE858C46D6B3C3": [
+		{
+			"Type": 1,
+			"LocationX": 17077.784714188419,
+			"LocationY": 19351.001134609822,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 11
+		}
+	],
+	"BP_Jelly1_C_24_EB33A78E4A85BD096013B7B3AEB40588": [
+		{
+			"Type": 1,
+			"LocationX": 17077.784739188417,
+			"LocationY": 18826.001134609822,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 12
+		}
+	],
+	"BP_Jelly1_C_25_3ADF5BC641FC85EC3C8F2C8090B38524": [
+		{
+			"Type": 1,
+			"LocationX": 17077.784762188418,
+			"LocationY": 18356.001134609822,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 13
+		}
+	],
+	"BP_Jelly1_C_26_8E6514F24362EC0AD3C6E5A1D91FDAB0": [
+		{
+			"Type": 1,
+			"LocationX": 17807.784724188416,
+			"LocationY": 19141.001169609823,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 14
+		}
+	],
+	"BP_Jelly1_C_27_31FA8B3D40C30231944E99A5293B4795": [
+		{
+			"Type": 1,
+			"LocationX": 17807.784753188418,
+			"LocationY": 18541.001169609823,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 15
+		}
+	],
+	"BP_Jelly1_C_28_D5FC50CE4855A8D408D9BF8AA865AAC6": [
+		{
+			"Type": 1,
+			"LocationX": 18582.784714188419,
+			"LocationY": 19351.001207609821,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 16
+		}
+	],
+	"BP_Jelly1_C_29_7805FB774D010D0D8F2F4DAA6E472553": [
+		{
+			"Type": 1,
+			"LocationX": 18582.784739188417,
+			"LocationY": 18826.001207609821,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 17
+		}
+	],
+	"BP_Jelly1_C_30_33FCCDD64C329094CC539194B0592327": [
+		{
+			"Type": 1,
+			"LocationX": 16612.784762188418,
+			"LocationY": 20031.001205455614,
+			"LocationZ": 143.19285393024293,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 18
+		}
+	],
+	"BP_Jelly1_C_31_8B9F8D484D7FA2906F8584A7FE65C20B": [
+		{
+			"Type": 1,
+			"LocationX": 19277.784724188419,
+			"LocationY": 19141.001241609822,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 19
+		}
+	],
+	"BP_Jelly1_C_32_5D4F48324899C3DC50AA22B53DE609E3": [
+		{
+			"Type": 1,
+			"LocationX": 19277.784753188418,
+			"LocationY": 18541.001241609822,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 20
+		}
+	],
+	"BP_Jelly1_C_33_4668D5054DFA11DE9A19948A95A5ACD2": [
+		{
+			"Type": 1,
+			"LocationX": 20062.784714188419,
+			"LocationY": 19351.00127960982,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 21
+		}
+	],
+	"BP_Jelly1_C_34_A026AD1749010E72D8A178A52EB8D176": [
+		{
+			"Type": 1,
+			"LocationX": 20062.784739188417,
+			"LocationY": 18826.00127960982,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 22
+		}
+	],
+	"BP_Jelly1_C_35_C953A61A4B54614F1566FCA528E05EA9": [
+		{
+			"Type": 1,
+			"LocationX": 20062.784762188418,
+			"LocationY": 18356.00127960982,
+			"LocationZ": 135.9382858654952,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 23
+		}
+	],
+	"BP_Jelly1_C_36_CD218BFB4C98D9DF12295F9DD65605CC": [
+		{
+			"Type": 1,
+			"LocationX": 2124.9797330482779,
+			"LocationY": 17328.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 24
+		}
+	],
+	"BP_Jelly1_C_37_0137817A4060862B45DAE5936D5935E5": [
+		{
+			"Type": 1,
+			"LocationX": 2935.967152836738,
+			"LocationY": 17328.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 25
+		}
+	],
+	"BP_Jelly1_C_38_F7E6E765432D879D0C405FAC1B92B52D": [
+		{
+			"Type": 1,
+			"LocationX": 2920.967152836738,
+			"LocationY": 18068.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 26
+		}
+	],
+	"BP_Jelly1_C_39_D97FD7CD4B30F26BD131C4846AFD378F": [
+		{
+			"Type": 1,
+			"LocationX": 3480.967152836738,
+			"LocationY": 16888.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 27
+		}
+	],
+	"BP_Jelly1_C_40_BCD3B4504C1274E2FF348E973529C82D": [
+		{
+			"Type": 1,
+			"LocationX": 3570.967152836738,
+			"LocationY": 17783.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 28
+		}
+	],
+	"BP_Jelly1_C_41_67386DB443A1637E9BB691AE806C245C": [
+		{
+			"Type": 1,
+			"LocationX": 3934.9797330482779,
+			"LocationY": 17328.693472469749,
+			"LocationZ": 169.07027051435833,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 29
+		}
+	],
+	"BP_Jelly1_C_46_A409D1AE46D2B32FDDB8E98B9949C5DF": [
+		{
+			"Type": 1,
+			"LocationX": 17077.784762188418,
+			"LocationY": 14726.001132377372,
+			"LocationZ": 137.60524824966947,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 30
+		}
+	],
+	"BP_Jelly1_C_47_81F151074BD1CE4261151387EACC6A81": [
+		{
+			"Type": 1,
+			"LocationX": 15027.784762188414,
+			"LocationY": 15701.001132469755,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 31
+		}
+	],
+	"BP_Jelly1_C_48_767AB08542C00AC28C2FF093D9A2950F": [
+		{
+			"Type": 1,
+			"LocationX": 15027.784762188414,
+			"LocationY": 13361.001132611571,
+			"LocationZ": 135.16213394209561,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 32
+		}
+	],
+	"BP_Jelly1_C_49_09C5DDCA4E44D2C03073A980D145DDDE": [
+		{
+			"Type": 1,
+			"LocationX": 13062.784762188414,
+			"LocationY": 13361.001132294328,
+			"LocationZ": 134.86744914166272,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 33
+		}
+	],
+	"BP_Jelly1_C_50_A38F2C2446C43F2D9A902F951C3F8949": [
+		{
+			"Type": 1,
+			"LocationX": 10477.784762188414,
+			"LocationY": 13971.001132469755,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 34
+		}
+	],
+	"BP_Jelly1_C_51_ABEB4DE948439655ABFA61829F9DCC47": [
+		{
+			"Type": 1,
+			"LocationX": 11267.784762188414,
+			"LocationY": 12416.001132469755,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 35
+		}
+	],
+	"BP_Jelly1_C_52_0DC6A0974C23BBD597F0C497DE59B00B": [
+		{
+			"Type": 1,
+			"LocationX": 9097.7847621884139,
+			"LocationY": 12416.001132502191,
+			"LocationZ": 134.92006272361863,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 36
+		}
+	],
+	"BP_Jelly1_C_53_D1A4BA364F295DD1E27DAA97E3C102F2": [
+		{
+			"Type": 1,
+			"LocationX": 8337.7847621884139,
+			"LocationY": 11206.001132469755,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 37
+		}
+	],
+	"BP_Jelly1_C_54_DE9F8ADA4B72707CBC71C98DA0B44669": [
+		{
+			"Type": 1,
+			"LocationX": 5697.7847621884102,
+			"LocationY": 10776.001132469755,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 38
+		}
+	],
+	"BP_Jelly1_C_55_E970BE8F4415721209DB589CB13FAA16": [
+		{
+			"Type": 1,
+			"LocationX": 14877.784762121239,
+			"LocationY": 11951.001132469755,
+			"LocationZ": 138.80011286455854,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 39
+		}
+	],
+	"BP_Jelly1_C_56_09080F9642CD357490F241A621070022": [
+		{
+			"Type": 1,
+			"LocationX": 13082.784762188414,
+			"LocationY": 11006.001132469755,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 40
+		}
+	],
+	"BP_Jelly1_C_57_2284EC184887F07610E257A05DA9ECFF": [
+		{
+			"Type": 1,
+			"LocationX": 10152.784762188414,
+			"LocationY": 9796.0011324697552,
+			"LocationZ": 127.52841545666527,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": -179.999999,
+			"Roll": 0,
+			"Pitch": 0,
+			"index": 41
+		}
+	],
+	"BP_Jelly1_C_58_E6EFDA6947E0E1FAE679ADBC0CE880CB": [
+		{
+			"Type": 1,
+			"LocationX": 20647.961911188417,
+			"LocationY": 8987.164483485416,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 42
+		}
+	],
+	"BP_Jelly1_C_59_4308F374426836C402DC78A9C888B868": [
+		{
+			"Type": 1,
+			"LocationX": 17633.885551265106,
+			"LocationY": 4916.1488659197439,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 43
+		}
+	],
+	"BP_Jelly1_C_60_DF240A8F4FC9B1FDFA3E94805E00B7EF": [
+		{
+			"Type": 1,
+			"LocationX": 16868.885551265106,
+			"LocationY": 5361.1488659197439,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 44
+		}
+	],
+	"BP_Jelly1_C_61_B25AC7A646A54B253DB40395B1F97B65": [
+		{
+			"Type": 1,
+			"LocationX": 18428.885551265106,
+			"LocationY": 5426.1488659197475,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 45
+		}
+	],
+	"BP_Jelly1_C_62_B71C3A264676415231EB7993C3E757DB": [
+		{
+			"Type": 1,
+			"LocationX": 19328.885551265103,
+			"LocationY": 4936.1488659197439,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 46
+		}
+	],
+	"BP_Jelly1_C_63_CA1D84F140DC15ABDF505D9CA8A9ED79": [
+		{
+			"Type": 1,
+			"LocationX": 19832.961911188417,
+			"LocationY": 5426.1488659197475,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 47
+		}
+	],
+	"BP_Jelly1_C_64_B66646874FF05CC974CA94B3B5BCBA7D": [
+		{
+			"Type": 1,
+			"LocationX": 21077.961911188417,
+			"LocationY": 7711.1488659197439,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 48
+		}
+	],
+	"BP_Jelly1_C_65_E843500A42221C17DDD05483630B78B8": [
+		{
+			"Type": 1,
+			"LocationX": 20667.961911188417,
+			"LocationY": 6471.1488659197439,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 49
+		}
+	],
+	"BP_Jelly1_C_66_D890984546D9710DDD3F44ADBF14C423": [
+		{
+			"Type": 1,
+			"LocationX": 21027.961911188417,
+			"LocationY": 5101.1488659197439,
+			"LocationZ": 136.778779271052,
+			"ExtentX": 75,
+			"ExtentY": 75,
+			"ExtentZ": 75,
+			"Yaw": 0,
+			"Roll": -0,
+			"Pitch": 0,
+			"index": 50
+		}
+	]
+}
