@@ -170,19 +170,26 @@ class cServer
 {
 private:
 	tcp::acceptor	acceptor;
+
+	// 비동기 접속 요청 처리 함수
 	void do_Accept()
 	{
+		// 비동기적으로 클라이언트의 연결 요청을 받아들임
 		acceptor.async_accept([this](boost::system::error_code ec, tcp::socket socket) {
 			if (!ec)
 			{
+				// 에러가 없는 경우 새로운 클라이언트 ID 할당
 				int p_id = Get_New_ClientID();
 				cout << "client" << p_id << "connect\n";
 				clients[p_id] = std::make_shared<cSession>(std::move(socket), p_id);
 				clients[p_id]->ingame_ = true;
 				clients[p_id]->Start();
+
+				// 다음 클라이언트의 연결을 비동기적으로 계속해서 기다림
 				do_Accept();
 			}
 			else {
+				// 에러 발생 시 에러 메시지 출력
 				cout << "ERROR : " << ec.what() << endl;
 			}
 			});

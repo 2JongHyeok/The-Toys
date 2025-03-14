@@ -630,23 +630,35 @@ void cSession::ProcessPacket(unsigned char* packet, int c_id)
 		charactor_num_ = p->charactorNum;
 		bool isGroupReady = false;
 		
+		// 현재 그룹의 인원을 증가시키고, 증가 시키기 전 인원수를 자신의 인덱스로 지정
 		int my_count = WaitingQueue[p->GroupNum]++;
+
+		// 인원이 다 찼는지 확인
 		if (my_count == MAX_ROOM_PLAYER-1)
 			isGroupReady = true;
+
+		// 현재 클라이언트 ID를 WaitingMap에 저장
 		WaitingMap[p->GroupNum][my_count] = c_id;
 
+		// 그룹이 준비 완료 상태인 경우 게임 시작 처리
 		if (isGroupReady) {
+			// 대기열에서 그룹 제거
 			WaitingQueue.erase(p->GroupNum);
+
+			// 게임 시작을 위한 데이터 구조체 생성
 			IngameMapData igmd;
 			int player_count = 1;
+
 			for (int id : WaitingMap[p->GroupNum]) {
 				if (clients[id]->charactor_num_ >= 6) {
+					// Chaser 역할의 플레이어를 첫 번째로 지정
 					igmd.player_ids_[0] = id;
-					cout << id << "얘가 술래\n";
+					cout << id << ": Chaser\n";
 				}
 				else {
+					// 나머지 플레이어들은 Runner 역할로 지정
 					igmd.player_ids_[player_count++] = id;
-					cout << id << "얘는 도망자\n";
+					cout << id << ": Runner\n";
 				}
 			}
 			// 최종 발표용
