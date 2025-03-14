@@ -423,9 +423,13 @@ int InIt_Objects() {
 void DoTimer(const boost::system::error_code& error, boost::asio::steady_timer* pTimer);
 void DoBombTimer(const boost::system::error_code& error, boost::asio::steady_timer* pTimer);
 
+// 각 게임 서버 스레드에서 사용하는 io_context 배열 (비동기 이벤트 처리용)
 boost::asio::io_context ioServices[MAX_GAME_SERVER_THREAD];
-boost::asio::io_context LobbyIoService;
+// 로비에서 사용하는 io_context (접속 관리, 로비 이벤트 처리용)
+boost::asio::io_context LobbyIoService;	
+// 폭탄을 제외한 일반 게임 이벤트(아이템 박스 오픈, 발전기 잠금 해제, 플레이어 리스폰 등) 타이머 관리용 벡터
 vector<boost::asio::steady_timer> timers;
+// 폭탄 관련 이벤트(폭발 타이밍, 폭탄 처리 등) 전용 타이머 관리용 벡터
 vector<boost::asio::steady_timer> boom_timers;
 vector<unique_ptr<cServer>> GameServers;
 vector<thread> Threads;
@@ -446,6 +450,7 @@ int main()
 		return 1;
 	}
 	cout << "맵 객체 읽기 완료" << endl;
+	// 게임 서버 스레드 개수만큼 타이머 초기화 및 비동기 이벤트 설정
 	for (int i = 0; i < MAX_GAME_SERVER_THREAD; ++i) {
 		timers.emplace_back(ioServices[i]);
 		timers[i].expires_after(boost::asio::chrono::milliseconds(100));
@@ -453,6 +458,7 @@ int main()
 			DoTimer(error, &timers[i]);
 			});
 
+		// 폭탄 이벤트 처리를 위한 타이머 생성 및 io_context 연결
 		boom_timers.emplace_back(ioServices[i]);
 		boom_timers[i].expires_after(boost::asio::chrono::milliseconds(10));
 		boom_timers[i].async_wait([i](const boost::system::error_code& error) {
