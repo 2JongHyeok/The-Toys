@@ -150,9 +150,12 @@ void process_packet(int c_id, char* packet)
 			}
 
 			while (true) {
+				// 가장 부하가 적은 게임 서버 스레드를 찾기 위한 초기 설정
 				int thread_index = 0;
 				int i = 0;
 				int min_thread_contention = 0x7FFFFFFF;
+
+				// 부하가 가장 적은 게임 서버 스레드를 찾는 과정
 				for (int tc : GameServerThreadContention) {
 					if (tc < min_thread_contention) {
 						min_thread_contention = tc;
@@ -160,15 +163,24 @@ void process_packet(int c_id, char* packet)
 					}
 					i++;
 				}
+
+				// 부하가 가장 적은 스레드를 찾아, 해당 스레드의 부하 수를 증가시킴
 				if (GameServerThreadContention[thread_index].compare_exchange_weak(min_thread_contention, min_thread_contention + 1)) {
+					// 해당 스레드의 방 번호를 얻고 증가시킴
 					int room_num = GameServerThreadRoomCount[thread_index]++;
+
+					// 선택된 플레이어들로 방 생성 패킷 전송
 					lsession.SendCreateRoomPacket(chaser, runners);
+
+					// 디버그용 출력 (추격자와 도망자들의 상태 출력)
 					cout << chaser << "\n";
 					clients[chaser].SendGameStartPacket(GameServerPortNums[thread_index]);
 					for (int rn : runners) {
 						cout << rn << "\n";
 						clients[rn].SendGameStartPacket(GameServerPortNums[thread_index]);
 					}
+
+					// 스레드 배정이 완료된 후 루프 탈출
 					break;
 				}
 			}
