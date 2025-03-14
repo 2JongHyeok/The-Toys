@@ -172,13 +172,13 @@ void process_packet(int c_id, char* packet)
 					// 선택된 플레이어들로 방 생성 패킷 전송
 					lsession.SendCreateRoomPacket(chaser, runners);
 
-					// 디버그용 출력 (추격자와 도망자들의 상태 출력)
-					cout << chaser << "\n";
+					// 디버그용 출력 (추격자와 도망자들의 번호 출력)
+					/*cout << chaser << "\n";
 					clients[chaser].SendGameStartPacket(GameServerPortNums[thread_index]);
 					for (int rn : runners) {
 						cout << rn << "\n";
 						clients[rn].SendGameStartPacket(GameServerPortNums[thread_index]);
-					}
+					}*/
 
 					// 스레드 배정이 완료된 후 루프 탈출
 					break;
