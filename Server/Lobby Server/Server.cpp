@@ -2,19 +2,21 @@
 #include "Over_Exp.h"
 #include "Session.h"
 #include "lSession.h"
+#include <queue>
 
 OVER_EXP g_a_over;
 OVER_EXP l_a_over;
 SOCKET g_s_socket, g_c_socket;
 SOCKET l_s_socket, l_c_socket;
+mutex MatchQLock;
 int Available_Ids = 0;
 
 lSession lsession;
 array<Session, MAX_USER> clients;
 concurrency::concurrent_unordered_map<std::string, array<std::string, 2>> UserInfo;
 concurrency::concurrent_unordered_set<std::string> UserName;
-concurrency::concurrent_queue<int> RunnerQueue;
-concurrency::concurrent_queue<int> ChaserQueue;
+queue<int> RunnerQueue;
+queue<int> ChaserQueue;
 
 
 array<atomic<int>, 8>GameServerThreadContention;
@@ -97,41 +99,71 @@ void process_packet(int c_id, char* packet)
 
 		cout << p->role << " \n";
 
+		// 모든 플레이어 준비 여부 확인 변수
 		bool allPlayersReady = false;
-		if (ChaserQueue.unsafe_size() >= MAX_CHASER_NUM) {
-			if (RunnerQueue.unsafe_size() >= MAX_RUNNER_NUM) {
+
+		// 매칭 대기열 접근을 위한 Lock
+		MatchQLock.lock();
+
+		// 추격자(Chaser) 대기열 인원이 최대 수에 도달했는지 확인
+		if (ChaserQueue.size() >= MAX_CHASER_NUM) {
+			// 도망자(Runner) 대기열 인원이 최대 수에 도달했는지 확인
+			if (RunnerQueue.size() >= MAX_RUNNER_NUM) {
+				// 모든 플레이어가 준비됨
 				allPlayersReady = true;
 			}
+			else {
+				// 도망자 인원이 부족한 경우 unlock 후 종료
+				MatchQLock.unlock();
+				break;
+			}
+		}
+		else {
+			// 추격자 인원이 부족한 경우 unlock 후 종료
+			MatchQLock.unlock();
+			break;
 		}
 
+		// 모든 플레이어가 준비된 경우 매칭 시작
 		if (allPlayersReady) {
-			int chaser;
-			if (!ChaserQueue.try_pop(chaser))
+			// 추격자 대기열에서 추격자 한 명을 가져옴
+			int chaser = ChaserQueue.front();
+			ChaserQueue.pop();
+
+			// 해당 추격자가 매칭을 취소하거나 종료 했을경우 중단
+			if (clients[chaser].state_ == ST_FREE) {
+				MatchQLock.unlock();
 				break;
-			if (clients[chaser].state_ == ST_FREE)
-				break;
-			int runners[MAX_RUNNER_NUM];
-			for (int i = 0; i < MAX_RUNNER_NUM; ++i) {
-				runners[i] = -1;
-				if (!RunnerQueue.try_pop(runners[i])) {
-					cout << "fail\n";
-					for (int rn : runners) {
-						if (rn == -1) {
-							break;
-						}
-						RunnerQueue.push(rn);
-					}
-					ChaserQueue.push(chaser);
-					return;
-				}
-				if (clients[runners[i]].state_ == ST_FREE) {
-					cout << "fail\n";
-					i--;
-					continue;
-				}
-				cout << "success\n";
 			}
 
+			// 도망자들을 저장할 배열
+			int runners[MAX_RUNNER_NUM];
+			int runnerCount = 0;
+
+			// 도망자 대기열에서 도망자 인원 추출
+			while (!RunnerQueue.empty()) {
+				runners[runnerCount] = RunnerQueue.front();
+				RunnerQueue.pop();
+
+				// 도망자가 매칭을 취소하거나 종료 했을경우 중단
+				if (clients[runners[runnerCount]].state_ == ST_FREE) {
+					continue;
+				}
+				runnerCount++;
+			}
+
+			// 도망자 수가 충분하지 않으면 다시 대기열에 되돌림
+			if (runnerCount != 4) {
+				for (int j = 0; j < runnerCount; ++j) {
+					RunnerQueue.push(runners[j]);
+				}
+				MatchQLock.unlock();
+				break;
+			}
+
+			// 작업이 끝났으니 매칭 대기열 unlock
+			MatchQLock.unlock();
+			
 			while (true) {
 				int thread_index = 0;
 				int i = 0;
