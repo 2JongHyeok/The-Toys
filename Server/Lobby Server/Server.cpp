@@ -97,24 +97,38 @@ void process_packet(int c_id, char* packet)
 
 		cout << p->role << " \n";
 
+		// 모든 플레이어 준비 여부 확인 변수
 		bool allPlayersReady = false;
+
+		// 추격자와 도망자 큐가 설정된 인원 이상인지 확인
 		if (ChaserQueue.unsafe_size() >= MAX_CHASER_NUM) {
 			if (RunnerQueue.unsafe_size() >= MAX_RUNNER_NUM) {
-				allPlayersReady = true;
+				allPlayersReady = true; // 추격자와 도망자 인원 모두 충족됨
 			}
 		}
 
 		if (allPlayersReady) {
-			int chaser;
-			if (!ChaserQueue.try_pop(chaser))
+			// 추격자(Chaser) 대기열에서 플레이어를 빼오려고 시도
+			int chaser = -1;
+			if (!ChaserQueue.try_pop(chaser)) {
+				// 실패시 코드 실행
 				break;
-			if (clients[chaser].state_ == ST_FREE)
+			}
+
+			// 해당 추격자가 매칭을 취소하거나 게임을 종료했을경우 중단
+			if (clients[chaser].state_ == ST_FREE) {
 				break;
+			}
+
+			// 도망자들을 저장할 배열
 			int runners[MAX_RUNNER_NUM];
 			for (int i = 0; i < MAX_RUNNER_NUM; ++i) {
 				runners[i] = -1;
+
+				// 도망자 대기열에서 플레이어 가져오기 시도
 				if (!RunnerQueue.try_pop(runners[i])) {
 					cout << "fail\n";
+					// 실패 시 도망자 다시 대기열에 삽입하고 종료
 					for (int rn : runners) {
 						if (rn == -1) {
 							break;
@@ -124,11 +138,14 @@ void process_packet(int c_id, char* packet)
 					ChaserQueue.push(chaser);
 					return;
 				}
+				// 도망자가 매칭을 취소하거나 게임을 종료했을경우 중단
 				if (clients[runners[i]].state_ == ST_FREE) {
 					cout << "fail\n";
 					i--;
 					continue;
 				}
+
+				// 도망자와 추격자 인원 충족 완료
 				cout << "success\n";
 			}
 
